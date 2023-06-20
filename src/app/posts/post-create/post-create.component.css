@@ -1,0 +1,9 @@
+
+mat-form-field,
+textarea {
+    width: 100%;
+}
+
+.savebtn {
+    margin: 0px 0px 7px 7px;
+}

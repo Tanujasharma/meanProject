@@ -22,7 +22,7 @@ export class PostListComponent implements OnInit, OnDestroy {
   constructor(public postService: PostService) {}
 
   ngOnInit(): void {
-    this.posts = this.postService.getPosts();
+   this.postService.getPosts();
     this.postSubs = this.postService
       .getPostUpdates()
       .subscribe((posts: Post[]) => {
@@ -30,7 +30,12 @@ export class PostListComponent implements OnInit, OnDestroy {
       });
   }
 
+  deletePost(postId: string) {
+    this.postService.deletePost(postId);
+  }
+
   ngOnDestroy(): void {
     this.postSubs.unsubscribe();
   }
+
 }

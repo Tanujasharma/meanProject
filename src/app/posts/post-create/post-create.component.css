@@ -4,6 +4,10 @@ textarea {
     width: 100%;
 }
 
+mat-spinner {
+    margin: auto;
+}
+
 .savebtn {
     margin: 0px 0px 7px 7px;
 }

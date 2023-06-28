@@ -1,14 +1,13 @@
-import { Injectable } from '@angular/core';
-import { Post } from '../posts/post.model';
-import { Subject } from 'rxjs'
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Subject } from "rxjs";
+import { map } from "rxjs/operators";
 import { Router } from "@angular/router";
 
-@Injectable({
-  providedIn: 'root'
-})
-export class PostService {
+import { Post } from "./post.model";
+
+@Injectable({ providedIn: "root" })
+export class PostsService {
   private posts: Post[] = [];
   private postsUpdated = new Subject<Post[]>();
 
